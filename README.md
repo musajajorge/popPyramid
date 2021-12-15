@@ -9,6 +9,8 @@
 [![Project-Status:Active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![Linux](https://svgshare.com/i/Zhy.svg)](https://svgshare.com/i/Zhy.svg)
 ![LinuxMint](https://img.shields.io/badge/Linux_Mint-87CF3E?style=for-the2-badge&logo=linux-mint&logoColor=white)
+[![CRAN-status](https://www.r-pkg.org/badges/version/popPyramid)](https://CRAN.R-project.org/package=popPyramid)
+[![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/popPyramid?color=yellow)](https://CRAN.R-project.org/package=popPyramid)
 
 <!-- badges: end -->
 
