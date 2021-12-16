@@ -36,12 +36,10 @@ install_github("musajajorge/popPyramid")
 ### Use departmental dataset in a map with ggplot2
 
 ``` r
-library(mapsPERU)
-df <- map_DEP
-
-library(ggplot2)
-ggplot(df, aes(geometry=geometry)) +
-  geom_sf(aes(fill=DEPARTAMENTO))
+df <- popPyramid::popPER
+df <- dplyr::filter(df, Year==2021)
+library(popPyramid)
+plotPyramid(df=df, age="gAge", sex="Sex", pop="Population")
 ```
 
 <img src="imgs/ex1.png" width="100%" />
@@ -49,8 +47,13 @@ ggplot(df, aes(geometry=geometry)) +
 ### Use the departmental dataset with centroids in a map with ggplot2
 
 ``` r
-library(mapsPERU)
-df <- map_DEP
+df <- popPyramid::popPER
+df <- dplyr::filter(df, Year==2021)
+library(popPyramid)
+plotPyramid(df=df, age="gAge", sex="Sex", pop="Population",
+            labx="Personas", laby="Grupo de edad",
+            twocolors=c("steelblue","violetred3"),
+            rotation=45, n.breaks=15, value.labels=FALSE)
 ```
 
 <img src="imgs/ex2.png" width="100%" />
@@ -58,8 +61,12 @@ df <- map_DEP
 ### Use the departmental dataset with centroids in a map with ggplot2
 
 ``` r
-library(mapsPERU)
-df <- map_DEP
+df <- popPyramid::popPER
+df <- dplyr::filter(df, Year==2021)
+library(popPyramid)
+plotPyramid(df=df, age="gAge", sex="Sex", pop="Population",
+            value.labels=TRUE, position.value.labels = "out",
+            size.value.labels=4)
 ```
 
 <img src="imgs/ex3.png" width="100%" />
@@ -67,8 +74,11 @@ df <- map_DEP
 ### Use the departmental dataset with centroids in a map with ggplot2
 
 ``` r
-library(mapsPERU)
-df <- map_DEP
+df <- popPyramid::popPER
+df <- dplyr::filter(df, Year==2021)
+df <- percDF(df, "gAge", "Sex", "Population")
+library(popPyramid)
+plotPercPyramid(df=df, age="gAge", sex="Sex", perpop="perc_Population")
 ```
 
 <img src="imgs/ex4.png" width="100%" />
@@ -76,8 +86,14 @@ df <- map_DEP
 ### Use the departmental dataset with centroids in a map with ggplot2
 
 ``` r
-library(mapsPERU)
-df <- map_DEP
+df <- popPyramid::popPER
+df <- dplyr::filter(df, Year==2021)
+df <- percDF(df, "gAge", "Sex", "Population")
+library(popPyramid)
+plotPercPyramid(df=df, age="gAge", sex="Sex", perpop="perc_Population",
+                labx="% Personas", laby="Grupo de edad", n.breaks=10,
+                value.labels=TRUE, position.value.labels="out",
+                size.value.labels=4)
 ```
 
 <img src="imgs/ex5.png" width="100%" />
