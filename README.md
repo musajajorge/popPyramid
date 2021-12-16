@@ -33,7 +33,9 @@ install_github("musajajorge/popPyramid")
 
 ## Usage :muscle:
 
-### Use departmental dataset in a map with ggplot2
+### Peru's population pyramid, year 2021
+
+Using the default parameters.
 
 ``` r
 df <- popPyramid::popPER
@@ -44,7 +46,9 @@ plotPyramid(df=df, age="gAge", sex="Sex", pop="Population")
 
 <img src="imgs/ex1.png" width="100%" />
 
-### Use the departmental dataset with centroids in a map with ggplot2
+### Peru's population pyramid, year 2021
+
+Modifying the colors, X and Y axis labels, as well as the rotation of the X axis labels.
 
 ``` r
 df <- popPyramid::popPER
@@ -58,7 +62,9 @@ plotPyramid(df=df, age="gAge", sex="Sex", pop="Population",
 
 <img src="imgs/ex2.png" width="100%" />
 
-### Use the departmental dataset with centroids in a map with ggplot2
+### Peru's population pyramid, year 2021
+
+Modifying the position of the values in the bars.
 
 ``` r
 df <- popPyramid::popPER
@@ -71,7 +77,9 @@ plotPyramid(df=df, age="gAge", sex="Sex", pop="Population",
 
 <img src="imgs/ex3.png" width="100%" />
 
-### Use the departmental dataset with centroids in a map with ggplot2
+### Percentage pyramid of Peru's population, year 2021
+
+Using the default parameters.
 
 ``` r
 df <- popPyramid::popPER
@@ -83,7 +91,9 @@ plotPercPyramid(df=df, age="gAge", sex="Sex", perpop="perc_Population")
 
 <img src="imgs/ex4.png" width="100%" />
 
-### Use the departmental dataset with centroids in a map with ggplot2
+### Percentage pyramid of Peru's population, year 2021
+
+Modifying the position of the values in the bars and the labels of the X and Y axes.
 
 ``` r
 df <- popPyramid::popPER
