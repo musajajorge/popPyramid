@@ -16,6 +16,72 @@
 
 [**popPyramid**](https://github.com/musajajorge/popPyramid/) is a package that facilitates the elaboration of population pyramids.
 
+## Installation :arrow_double_down:
+
+Install **popPyramid** from [**CRAN**](https://CRAN.R-project.org/package=popPyramid):
+
+``` r
+install.packages("popPyramid")
+```
+
+or install **popPyramid** with
+
+``` r
+library(remotes)
+install_github("musajajorge/popPyramid")
+```
+
+## Usage :muscle:
+
+### Use departmental dataset in a map with ggplot2
+
+``` r
+library(mapsPERU)
+df <- map_DEP
+
+library(ggplot2)
+ggplot(df, aes(geometry=geometry)) +
+  geom_sf(aes(fill=DEPARTAMENTO))
+```
+
+<img src="imgs/ex1.png" width="100%" />
+
+### Use the departmental dataset with centroids in a map with ggplot2
+
+``` r
+library(mapsPERU)
+df <- map_DEP
+```
+
+<img src="imgs/ex2.png" width="100%" />
+
+### Use the departmental dataset with centroids in a map with ggplot2
+
+``` r
+library(mapsPERU)
+df <- map_DEP
+```
+
+<img src="imgs/ex3.png" width="100%" />
+
+### Use the departmental dataset with centroids in a map with ggplot2
+
+``` r
+library(mapsPERU)
+df <- map_DEP
+```
+
+<img src="imgs/ex4.png" width="100%" />
+
+### Use the departmental dataset with centroids in a map with ggplot2
+
+``` r
+library(mapsPERU)
+df <- map_DEP
+```
+
+<img src="imgs/ex5.png" width="100%" />
+
 ------------
 
 <p align="center">
