@@ -102,6 +102,7 @@ df <- percDF(df, "gAge", "Sex", "Population")
 library(popPyramid)
 plotPercPyramid(df=df, age="gAge", sex="Sex", perpop="perc_Population",
                 labx="% Personas", laby="Grupo de edad", n.breaks=10,
+                twocolors=c("steelblue","violetred3"),
                 value.labels=TRUE, position.value.labels="out",
                 size.value.labels=4)
 ```
