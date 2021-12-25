@@ -93,7 +93,7 @@ plotPercPyramid(df=df, age="gAge", sex="Sex", perpop="perc_Population")
 
 ### Percentage pyramid of Peru's population, year 2021
 
-Modifying the position of the values in the bars and the labels of the X and Y axes.
+Modifying the position of the values on the bars, the X and Y axis labels and the colors of the bars.
 
 ``` r
 df <- popPyramid::popPER
